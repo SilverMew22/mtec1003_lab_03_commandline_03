@@ -92,7 +92,13 @@ $ rm -rf mtec1003-labs-02
 (skip if these directories don't exist)
 ----------
 
+rm -rf mtec1002-lab-02
 
+rm -rf mtec1002-lab-02.zip
+
+or
+
+rm -rf mtec1002-lab-02*
 
 ==========
 6.  A compressed archive (.tar.gz) of the lab files can be found at this url: 
@@ -123,6 +129,7 @@ Write the command(s) that you used to do this - as well as its output - below:
 ----------
 command
 tar -xvf mtec1003-lab-03.tar.gz
+
 output
 x mtec1003-lab-03/
 x mtec1003-lab-03/._.DS_Store
@@ -346,7 +353,7 @@ Otherwise...
 
 Write the command(s) that you used to do this - as well as its output - below:
 ----------
-
+ls -l
 
 
 ==========
@@ -354,7 +361,8 @@ Write the command(s) that you used to do this - as well as its output - below:
 
 Write the command(s) that you used to determine this - as well as its output - below:
 ----------
-
+ls mtec1003-lab-03
+books logs web
 
 
 ==========
@@ -363,50 +371,12 @@ Write the command(s) that you used to determine this - as well as its output - b
 Write the command(s) (including going home) that you used to do this below:
 ----------
 commands
-~ cd
-ls
+cd ~
+cd mtec1003-lab-03/*/science-fiction
+pwd
+
 output
-AMALogger20190109.log
-AMALogger20190308.log
-AMALogger20190905.log
-AMALogger20190909.log
-AMALogger20190911.log
-AMALogger20190916.log
-Adlm
-Adobe
-Applications
-Creative Cloud Files
-Desktop
-Documents
-Downloads
-Library
-MPLABXProjects
-Movies
-Music
-Pictures
-Public
-QLData
-Things
-__MACOSX
-animals
-cats
-cats3
-foo
-food
-google.html
-hello.txt
-ipe.properties
-isus
-mtec1002-lab-02
-mtec1002-lab-02.zip
-mtec1003-lab-03
-mtec1003-lab-03.tar.gz
-pymel.log
-shequanagarnett@gmail.com Creative Cloud Files
-stuff
-xgen
-
-
+/Users/student/mtec1003-lab-03/books/science-fiction
 
 ==========
 11.  Write the files that are in the science fiction directory below.
@@ -414,9 +384,7 @@ xgen
 Write the command(s) that you used to do this - as well as its output - below:
 ----------
 commands
-cd mtec1003-lab-03
-cd books
-cd science-fiction
+cd mtec1003-lab-03/books/science-fiction
 ls
 
 output
@@ -429,12 +397,15 @@ pg84.txt	pg86.txt
 Write the command(s) that you used to do this below:
 ----------
 cd ~
+cd /Users/student/mtec1003-lab-03/books/science-fiction
 
 13. Immediately change back to the mtec1003-lab-03 folder with a single command using a *relative* path.
 
 Write the command(s) that you used to do this below:
 ----------
 cd mtec1003-lab-03/books/science-fiction/
+or
+cd ../..
 ==========
 14. Find out what the most recently modified directory is in mtec1003 (there are only 3 to choose from)?  How would you find this out?  Hint: perhaps using something to show the modified date... and sort it by time.
 
@@ -458,4 +429,5 @@ drwxr-xr-x    6 student  staff    204 Feb 13  2013 web
 Write the command(s) that you used to do this below:
 ----------
 commands 
-tar -cvf logs.tar dirname
+tar -cvf logs.tar Users/student/mtec1003-lab-03/logs
+gzip logs.tar
